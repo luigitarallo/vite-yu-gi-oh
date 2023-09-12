@@ -1,7 +1,7 @@
 <script>
-import PCardsList from "./PlayingCards/PCardsList.vue";
+import CardsList from "./PlayingCards/CardsList.vue";
 export default {
-  components: { PCardsList },
+  components: { CardsList },
 };
 </script>
 
@@ -15,7 +15,7 @@ export default {
       <div class="result-bar">
         <h3>Found Cards</h3>
       </div>
-      <PCardsList />
+      <CardsList />
     </div>
   </main>
 </template>
@@ -24,7 +24,6 @@ export default {
 @use "../../src/assets/scss/style.scss" as *;
 
 main {
-  height: 100vh;
   select {
     width: 10%;
   }
@@ -37,6 +36,7 @@ main {
         color: white;
         font-size: 1rem;
         padding: 1rem;
+        margin: 0;
       }
     }
   }
