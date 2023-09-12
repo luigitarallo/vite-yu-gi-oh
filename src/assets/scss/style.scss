@@ -1,6 +1,11 @@
-@use "./partials/mixins";
-@use "./partials/variables";
+@use "./partials/mixins" as *;
+@use "./partials/variables" as *;
 
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: $font;
+  background-color: $bg-color;
+}
+
+.debug {
+  border: 1px dotted red;
 }
