@@ -11,7 +11,12 @@ export default {
       <option selected>Alien</option>
       <option value="1">Alien</option>
     </select>
-    <PCardsList />
+    <div class="box mt-3">
+      <div class="result-bar">
+        <h3>Found Cards</h3>
+      </div>
+      <PCardsList />
+    </div>
   </main>
 </template>
 
@@ -22,6 +27,18 @@ main {
   height: 100vh;
   select {
     width: 10%;
+  }
+  .box {
+    background-color: white;
+    padding: 3rem;
+    .result-bar {
+      background-color: #212529;
+      h3 {
+        color: white;
+        font-size: 1rem;
+        padding: 1rem;
+      }
+    }
   }
 }
 </style>
