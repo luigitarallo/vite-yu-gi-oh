@@ -1,5 +1,5 @@
 <script>
-import PCardsList from "./PlayingCards/pCardsList.vue";
+import PCardsList from "./PlayingCards/PCardsList.vue";
 export default {
   components: { PCardsList },
 };
