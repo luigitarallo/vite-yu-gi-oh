@@ -19,16 +19,18 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+@use "../../assets/scss/style.scss" as *;
+@use "../../assets/scss/partials/variables" as *;
 .card-img {
   max-width: 100%;
 }
 .caption {
   padding: 0.7rem;
   height: 100px;
-  background-color: #d48f38;
+  background-color: $bg-color;
   text-align: center;
   .c-name {
-    color: white;
+    color: $text-color;
     font-size: 1rem;
     font-weight: 800;
   }
