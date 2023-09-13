@@ -1,20 +1,12 @@
 <script>
 import CardsList from "./PlayingCards/CardsList.vue";
-import BaseSelect from "./BaseSelect.vue";
 export default {
-  components: { CardsList, BaseSelect },
-
-  methods: {
-    handleSelect() {
-      console.log("ho cambiato il valore");
-    },
-  },
+  components: { CardsList },
 };
 </script>
 
 <template>
   <main class="container mt-4">
-    <BaseSelect @change-select="handleSelect()" />
     <div class="box mt-3">
       <div class="result-bar">
         <h3>Found Cards</h3>
@@ -29,9 +21,6 @@ export default {
 @use "../../src/assets/scss/partials/variables" as *;
 
 main {
-  select {
-    width: 10%;
-  }
   .box {
     background-color: $text-color;
     padding: 3rem;
