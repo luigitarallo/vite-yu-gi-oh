@@ -13,13 +13,14 @@ export default {};
 
 <style lang="scss" scoped>
 @use "../../src/assets/scss/style.scss" as *;
+@use "../../src/assets/scss/partials/variables" as *;
 
 header {
   display: flex;
   align-items: center;
   justify-content: start;
   height: 100px;
-  background-color: white;
+  background-color: $text-color;
   .logo {
     width: 80px;
     img {
