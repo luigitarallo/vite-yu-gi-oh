@@ -1,13 +1,16 @@
 <script>
 import CardsList from "./PlayingCards/CardsList.vue";
+import SelectedCount from "../components/SelectedCount.vue";
+
 export default {
-  components: { CardsList },
+  components: { CardsList, SelectedCount },
 };
 </script>
 
 <template>
-  <main>
-    <div class="box">
+  <main class="container">
+    <div class="box mt-4">
+      <SelectedCount />
       <CardsList />
     </div>
   </main>
@@ -20,7 +23,7 @@ export default {
 main {
   .box {
     background-color: $text-color;
-    padding: 3rem;
+    padding: 2rem 3rem;
   }
 }
 </style>

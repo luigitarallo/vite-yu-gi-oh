@@ -1,8 +1,11 @@
 <script>
+import { store } from "../data/store";
 export default {
-  // Ricevo il valore tramite prop, deve essere un numero
-  props: {
-    cardsNumber: Number,
+  data() {
+    return {
+      // Ricevo il valore tramite prop, deve essere un numero
+      store,
+    };
   },
 };
 </script>
@@ -10,7 +13,8 @@ export default {
 <template>
   <div class="result-bar mt-4">
     <!-- Stampo il numero ricevuto tramite prop -->
-    <h3>Found {{ cardsNumber }} cards</h3>
+    <!-- Avendo lo store delle cards, posso ricavare il numero di elementi nell'array aggiornato alla ricerca-->
+    <h3>Found {{ this.store.cards.length }} cards</h3>
   </div>
 </template>
 
@@ -23,6 +27,7 @@ export default {
     color: $text-color;
     font-size: 1rem;
     padding: 1rem;
+    font-weight: 800;
     margin: 0;
   }
 }
