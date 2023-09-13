@@ -6,11 +6,8 @@ export default {
 </script>
 
 <template>
-  <main class="container mt-4">
-    <div class="box mt-3">
-      <div class="result-bar">
-        <h3>Found Cards</h3>
-      </div>
+  <main>
+    <div class="box">
       <CardsList />
     </div>
   </main>
@@ -24,15 +21,6 @@ main {
   .box {
     background-color: $text-color;
     padding: 3rem;
-    .result-bar {
-      background-color: $nav-bg-color;
-      h3 {
-        color: $text-color;
-        font-size: 1rem;
-        padding: 1rem;
-        margin: 0;
-      }
-    }
   }
 }
 </style>
