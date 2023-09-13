@@ -30,6 +30,7 @@ export default {
   .c-name {
     color: white;
     font-size: 1rem;
+    font-weight: 800;
   }
 }
 </style>
