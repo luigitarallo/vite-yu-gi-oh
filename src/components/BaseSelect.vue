@@ -20,6 +20,6 @@ export default {
 
 <style lang="scss" scoped>
 select {
-  width: 10%;
+  width: auto;
 }
 </style>
