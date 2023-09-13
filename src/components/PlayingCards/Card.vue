@@ -1,5 +1,6 @@
 <script>
 export default {
+  //   Props che prendo dal componente CardsList
   props: {
     name: String,
     archetype: String,
@@ -10,6 +11,7 @@ export default {
 
 <template>
   <div class="cols">
+    <!-- Inserisco i valori ricevuti tramite props -->
     <img :src="image" alt="" class="card-img" />
     <div class="caption">
       <h3 class="c-name">{{ name }}</h3>
