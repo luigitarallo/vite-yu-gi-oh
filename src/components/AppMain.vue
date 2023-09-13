@@ -22,18 +22,19 @@ export default {
 
 <style lang="scss" scoped>
 @use "../../src/assets/scss/style.scss" as *;
+@use "../../src/assets/scss/partials/variables" as *;
 
 main {
   select {
     width: 10%;
   }
   .box {
-    background-color: white;
+    background-color: $text-color;
     padding: 3rem;
     .result-bar {
-      background-color: #212529;
+      background-color: $nav-bg-color;
       h3 {
-        color: white;
+        color: $text-color;
         font-size: 1rem;
         padding: 1rem;
         margin: 0;
