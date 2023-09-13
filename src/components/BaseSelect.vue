@@ -1,20 +1,22 @@
 <script>
 export default {
-  data() {
-    return {};
-  },
+  emits: ["change-select"],
 };
 </script>
 
 <template>
   <select
     @change="$emit('change-select')"
-    class="form-select"
+    class="form-select mt-4"
     aria-label="Default select example"
   >
-    <option selected>Alien</option>
+    <option selected></option>
     <option value="1">Alien</option>
   </select>
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+select {
+  width: 10%;
+}
+</style>
