@@ -18,7 +18,7 @@ export default {
       :key="card.id"
       :image="card.card_images[0].image_url"
       :name="card.name"
-      :type="card.type"
+      :archetype="card.archetype"
     />
   </div>
 </template>
