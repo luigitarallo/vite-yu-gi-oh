@@ -1,6 +1,9 @@
 <script>
 export default {
   emits: ["change-select"],
+  props: {
+    options: Object,
+  },
 };
 </script>
 
@@ -11,7 +14,7 @@ export default {
     aria-label="Default select example"
   >
     <option selected></option>
-    <option value="1">Alien</option>
+    <option v-for="option in options">{{ option.archetype_name }}</option>
   </select>
 </template>
 

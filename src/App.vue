@@ -11,6 +11,7 @@ export default {
     return {
       store,
       apiUri: "https://db.ygoprodeck.com/api/v7/cardinfo.php?num=20&offset=0",
+      archetypeUri: "https://db.ygoprodeck.com/api/v7/archetypes.php",
     };
   },
 
@@ -22,6 +23,13 @@ export default {
         store.cards = response.data.data;
       });
     },
+    fetchArchetype(endpoint) {
+      axios.get(endpoint).then((response) => {
+        store.archetypes = response.data;
+        console.log(store.archetypes);
+      });
+    },
+
     handleSelect() {
       console.log("ho cambiato il valore");
     },
@@ -29,6 +37,7 @@ export default {
 
   created() {
     this.fetchCards(this.apiUri);
+    this.fetchArchetype(this.archetypeUri);
   },
 };
 </script>
@@ -36,7 +45,7 @@ export default {
 <template>
   <AppHeader />
   <div class="container">
-    <BaseSelect @change-select="handleSelect()" />
+    <BaseSelect :options="store.archetypes" @change-select="handleSelect()" />
   </div>
   <AppMain />
 </template>
