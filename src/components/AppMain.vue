@@ -1,16 +1,20 @@
 <script>
 import CardsList from "./PlayingCards/CardsList.vue";
+import BaseSelect from "./BaseSelect.vue";
 export default {
-  components: { CardsList },
+  components: { CardsList, BaseSelect },
+
+  methods: {
+    handleSelect() {
+      console.log("ho cambiato il valore");
+    },
+  },
 };
 </script>
 
 <template>
   <main class="container mt-4">
-    <select class="form-select" aria-label="Default select example">
-      <option selected>Alien</option>
-      <option value="1">Alien</option>
-    </select>
+    <BaseSelect @change-select="handleSelect()" />
     <div class="box mt-3">
       <div class="result-bar">
         <h3>Found Cards</h3>
