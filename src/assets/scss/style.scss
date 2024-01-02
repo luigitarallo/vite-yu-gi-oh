@@ -1,11 +1,12 @@
 @use "./partials/mixins" as *;
 @use "./partials/variables" as *;
+@import url("https://fonts.googleapis.com/css2?family=Overlock+SC&display=swap");
 
 body {
-  font-family: $font;
   background-color: $bg-color;
+  font-family: "Overlock SC", sans-serif;
 }
 
-.debug {
-  border: 1px dotted red;
-}
+// .debug {
+//   border: 1px dotted red;
+// }
