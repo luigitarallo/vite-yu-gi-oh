@@ -22,7 +22,7 @@ export default {
 
 main {
   .box {
-    background-color: $text-color;
+    background-color: $app-bg-color;
     padding: 2rem 3rem;
   }
 }
