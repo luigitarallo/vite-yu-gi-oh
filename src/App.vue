@@ -10,6 +10,7 @@ export default {
   data() {
     return {
       store,
+      loading: false,
       apiUri: "https://db.ygoprodeck.com/api/v7/cardinfo.php",
       archetypeUri: "https://db.ygoprodeck.com/api/v7/archetypes.php",
     };
@@ -20,15 +21,19 @@ export default {
   methods: {
     // Metodo per interrogare l'url e salvare i dati ottenuti una variabile
     fetchCards(endpoint) {
+      this.loading = true;
       axios.get(endpoint).then((response) => {
         store.cards = response.data.data;
+        this.loading = false; // Imposta lo stato di caricamento su false quando i dati sono pronti
       });
     },
 
     // Metodo per interrogare un secondo url e salvare i dati ottenuti in una seconda variabile
     fetchArchetype(termination) {
+      this.loading = true;
       axios.get(termination).then((response) => {
         store.archetypes = response.data;
+        this.loading = false;
       });
     },
 
@@ -58,9 +63,37 @@ export default {
       @change-select="handleSelect"
     />
   </div>
+  <div v-if="loading" class="loader-container">
+    <div class="loader"></div>
+  </div>
   <AppMain />
 </template>
 
 <style lang="scss">
 @use "./assets/scss/style.scss";
+
+.loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.loader {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #060f4e;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 </style>
