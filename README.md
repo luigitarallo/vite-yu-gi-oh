@@ -45,6 +45,7 @@ npm i
 ```
 npm run dev
 ```
+4. Open the localhost
 
 ## ScreenShot
 
