@@ -33,7 +33,7 @@ The card details are displayed in a responsive layout, featuring card images, na
 
 ## Istructions
 
-1. Open new termina
+1. Open new terminal
 2. Run command
 
 ```
